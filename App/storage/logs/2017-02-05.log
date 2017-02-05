@@ -1,0 +1,18 @@
+rquest time: 2017-02-05 15:33:56
+rquest url: http://svc.pptvyun.com/svc/api3/playstr/0a2dnq6cpqiim6uL4K2fnK2cp-yemq2cpKOd
+request method: send_get_for_authorization2
+request data: 
+response info: {"data":"","err":388888,"msg":"auth fail"}
+
+rquest time: 2017-02-05 15:33:57
+rquest url: http://svc.pptvyun.com/svc/api3/playstr/0a2dnq6cpqiim6uL4K2fnK2cp-yemq2cpKOd
+request method: send_get_for_authorization2
+request data: 
+response info: {"data":"","err":388888,"msg":"auth fail"}
+
+rquest time: 2017-02-05 15:34:30
+rquest url: http://svc.pptvyun.com/svc/api3/playstr/0a2dnq6cpqiim6uL4K2fnK2cp-yemq2cpKOd
+request method: send_get_for_authorization2
+request data: 
+response info: {"data":{"channel_web_id":"0a2dnq6cpqiim6uL4K2fnK2cp-yemq2cpKOd","channel_type":2,"rtmp_url":"rtmp://211.161.151.166:1935/live/e9e9a30c3d5a47f9875d1088e21677eb?ppyunid=158768625&cpn=33777&type=web.cloudplay0","hdl_url":"http://211.161.151.166/live/rtmp/get/e9e9a30c3d5a47f9875d1088e21677eb?ppyunid=158768625&cpn=33777&type=web.cloudplay0","m3u8_url":"http://player.pptvyun.com/svc/m3u8player/pl/0a2dnq6cpqiim6uL4K2fnK2cp-yemq2cpKOd.m3u8?type=web.cloudplay","rtmps_url":null},"err":0,"msg":"success"}
+
