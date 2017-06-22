@@ -9,8 +9,8 @@ class ClassLoader
 {
     public static function loader($classname)
     {
-        $class_file = __DIR__."/../../". $classname. ".php";
-        $class_file = str_replace('\\', DIRECTORY_SEPARATOR, $class_file);
+        $classname = strtr($classname, ['\\' => DS]);
+        $class_file = ROOT_PATH. $classname. ".php";
         if (file_exists($class_file)){
             require_once($class_file);
         } else {

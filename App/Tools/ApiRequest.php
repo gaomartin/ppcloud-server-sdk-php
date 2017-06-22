@@ -24,6 +24,24 @@ class ApiRequest
         Log::write(__FUNCTION__, $url, $arr, $data);
         return $data;
     }
+    public static function send_post_for_authorization($url, $arr, $auth)
+    {
+        $json = json_encode($arr);
+        $header = [
+            "Authorization: $auth",
+            'version: 3.0',
+        ];
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($arr));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 75);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        $data = curl_exec($ch);
+        curl_close($ch);
+        Log::write(__FUNCTION__, $url, $arr, $data);
+        return $data;
+    }
     public static function send_post($url, array $post_data = [])
     {
 
@@ -102,8 +120,9 @@ class ApiRequest
         self::showJavaApiInfo($data, $url, 'JSON_POST');
         return $data;
     }
-    public static function send_get($url)
+    public static function send_get($url, array $data = [])
     {
+        $url = $url. '?'. http_build_query($data);
         $header = array('Expect:');
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -113,7 +132,7 @@ class ApiRequest
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
         $retData = curl_exec( $ch );
         curl_close( $ch );
-        self::showJavaApiInfo($retData, $url, 'GET');
+        Log::write(__FUNCTION__, $url, [], $retData);
 
         return $retData;
     }

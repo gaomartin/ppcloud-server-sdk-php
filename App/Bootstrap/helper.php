@@ -5,9 +5,7 @@
  * Date: 2016/12/22
  * Time: 15:56
  */
-include_once __DIR__ . DIRECTORY_SEPARATOR. 'autoload.php';
-use App\Vendor\Config;
-define('DS', DIRECTORY_SEPARATOR);
+use App\Tools\Config;
 if (!function_exists('config')) {
     function config($key){
         static $config = [];
