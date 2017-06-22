@@ -6,6 +6,6 @@
  * Time: 10:24
  * 9.1 创建直播接口
  */
-require_once str_replace('\\', DIRECTORY_SEPARATOR, '..\App\Bootstrap\autoload.php');
-use App\Live;
-echo Live::createLive($_GET)->toXml();
+require_once __DIR__. DIRECTORY_SEPARATOR. '..'. DIRECTORY_SEPARATOR. 'App'. DIRECTORY_SEPARATOR. 'Bootstrap'. DIRECTORY_SEPARATOR. 'app_init.php';
+use App\Live\Live;
+echo Live::createLive(array_merge($_GET, $_POST))->toXml();

@@ -7,7 +7,7 @@
  * 9.4 直播状态控制接口
  */
 require_once str_replace('\\', DIRECTORY_SEPARATOR, '..\App\Bootstrap\autoload.php');
-use App\ModifyLiveStatus;
+use App\Live\ModifyLiveStatus;
 //开始直播
 $startLiveArray = [
     'channel_web_id' => '0a2dnq6coqajoqiL4K2fnK2cp-yema-Yp6ef',

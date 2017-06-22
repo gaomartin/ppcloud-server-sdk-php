@@ -5,6 +5,6 @@
  * Date: 2017/1/4
  * Time: 17:38
  */
-require_once str_replace('\\', DIRECTORY_SEPARATOR, '..\App\Bootstrap\autoload.php');
-use App\Live;
-echo Live::updateLive($_GET)->toXml();
+require_once __DIR__. DIRECTORY_SEPARATOR. '..'. DIRECTORY_SEPARATOR. 'App'. DIRECTORY_SEPARATOR. 'Bootstrap'. DIRECTORY_SEPARATOR. 'app_init.php';
+use App\Live\Live;
+echo Live::updateLive(array_merge($_GET, $_POST))->toXml();
